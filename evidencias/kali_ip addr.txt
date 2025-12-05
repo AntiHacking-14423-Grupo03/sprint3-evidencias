@@ -1,0 +1,33 @@
+zsh: corrupt history file /home/kali/.zsh_history
+┌──(kali㉿kali)-[~]
+└─$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d1:f8:5d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.5/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 325sec preferred_lft 325sec
+    inet6 fe80::9f98:bae7:ce0b:4ba6/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:29:e2:83 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.45.3/24 brd 192.168.45.255 scope global dynamic noprefixroute eth1
+       valid_lft 325sec preferred_lft 325sec
+    inet6 fe80::897e:3066:a74a:19d1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:22:90:e2 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.4.15/24 brd 10.0.4.255 scope global dynamic noprefixroute eth2
+       valid_lft 75623sec preferred_lft 75623sec
+    inet6 fd17:625c:f037:4:84e6:bda3:6668:5818/64 scope global dynamic noprefixroute 
+       valid_lft 86023sec preferred_lft 14023sec
+    inet6 fe80::834:3464:f575:7241/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:83:ac:6b:e9 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever

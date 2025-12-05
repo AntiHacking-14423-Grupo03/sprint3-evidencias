@@ -1,0 +1,26 @@
+msfadmin@metasploitable:"$ ipconfig
+-bash: ipconf ig: command not found
+msfadmin@metasploitable :~ $ ifconfig
+eth0
+
+Link encap: Ethernet HWaddr 08:00:27:6b:72:8d
+inet addr:10.0.2.7 Bcast:10.0.2.255 Mask:255.255.255.0
+inet6 addr: fe80 :: a00:27ff:fe6b:728d/64 Scope:Link
+UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+RX packets:48 errors:0 dropped:0 overruns: 0 frame:0
+TX packets:89 errors:0 dropped:0 overruns:0 carrier :0
+collisions:0 txqueuelen :1000
+RX bytes:6833 (6.6 KB) TX bytes:10999 (10.7 KB)
+Base address:0xd020 Memory:f0200000-f0220000
+
+1o
+
+Link encap: Local Loopback
+inet addr:127.0.0.1 Mask:255.0.0.0
+inet6 addr: :: 1/128 Scope:Host
+UP LOOPBACK RUNNING MTU:16436  Metric:1
+
+RX packets: 113 errors:0 dropped:0 overruns:0 frame:0
+TX packets:113 errors:0 dropped:0 overruns:0 carrier :0
+collisions:0 txqueuelen:0
+RX bytes:29705 (29.0 KB) TX bytes:29705 (29.0 KB)

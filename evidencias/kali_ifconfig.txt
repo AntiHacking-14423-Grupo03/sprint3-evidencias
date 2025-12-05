@@ -1,0 +1,47 @@
+┌──(kali㉿kali)-[~]
+└─$ ifconfig 
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:83:ac:6b:e9  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 6 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.5  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::9f98:bae7:ce0b:4ba6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:d1:f8:5d  txqueuelen 1000  (Ethernet)
+        RX packets 296  bytes 104396 (101.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 262  bytes 38898 (37.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.45.3  netmask 255.255.255.0  broadcast 192.168.45.255
+        inet6 fe80::897e:3066:a74a:19d1  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:29:e2:83  txqueuelen 1000  (Ethernet)
+        RX packets 78  bytes 24549 (23.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 96  bytes 15936 (15.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.4.15  netmask 255.255.255.0  broadcast 10.0.4.255
+        inet6 fe80::834:3464:f575:7241  prefixlen 64  scopeid 0x20<link>
+        inet6 fd17:625c:f037:4:84e6:bda3:6668:5818  prefixlen 64  scopeid 0x0<global>
+        ether 08:00:27:22:90:e2  txqueuelen 1000  (Ethernet)
+        RX packets 34  bytes 6346 (6.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 82  bytes 10287 (10.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 8  bytes 480 (480.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8  bytes 480 (480.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
