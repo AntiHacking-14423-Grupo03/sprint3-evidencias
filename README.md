@@ -67,8 +67,8 @@ ip addr show
 ```
  *Confirmacion de la ejecucion de los comandos*: 
 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 014610.png>)
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 015147.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 014610.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 015147.png>)
 captura mostrando puertos y versiones, especialmente ademas que se como evidencia los resultados en un txt:
 
 despues ya obtienes los IPs:
@@ -93,7 +93,7 @@ nmap -sV 10.0.2.7
 
 
 **S3-A01_ping and A02_nmap**:
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 025325.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 025325.png>)
 
  captura donde se vea comando + 4 replies + estadísticas.ademas, captura mostrando puertos y versiones, especialmente
 
@@ -119,7 +119,7 @@ search vsftpd 2.3.4
 ```
 
 **S3-A04_search_vsftpd and A03_msfconsole**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 025351.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 025351.png>)
 se debe ver `exploit/unix/ftp/vsftpd_234_backdoor`.Ademas, pantalla con el prompt `msf6 >`.
 
 **3) Cargar módulo y ver opciones**
@@ -137,7 +137,7 @@ show options
 ```
 
 **S3-A06_show_options_rhosts and A05_show_options_inicial**:
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 025606.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 025606.png>)
  `RHOSTS  10.0.2.7`. Ademas, `RHOSTS` aún vacío.
 
 **5) Ejecutar exploit**
@@ -170,7 +170,7 @@ exit   # desde msfconsole, si quieres salir de MSF
 ```
 
 **S3-A07_exploit_ok, A09_exit and A08_shell_root** .
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 030020.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 030020.png>)
  log de ejecución donde se vea que abrió una shell. Ademas, salida mostrando:
 
   * `whoami` → `root`
@@ -197,7 +197,7 @@ http://10.0.2.7
 * Verás el índice de Metasploitable2 con links (DVWA, Mutillidae, etc.).
 
 **S3-B01_index_metasploitable**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 030321.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 030321.png>)
 captura de la página principal.
 
 Luego:
@@ -207,7 +207,7 @@ http://10.0.2.7/dvwa
 ```
 
 **S3-B02_dvwa_login**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 030420.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 030420.png>)
 pantalla de login de DVWA.
 
 ### B2. Configurar Burp como proxy
@@ -221,7 +221,7 @@ pantalla de login de DVWA.
 * Debe haber un listener `127.0.0.1:8080` activo. ([PortSwigger][3])
 
 **S3-B03_burp_listener**.
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 030933-1.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 030933-1.png>)
 
 **3) Configurar navegador:**
 
@@ -234,14 +234,14 @@ pantalla de login de DVWA.
   * Marcar “Usar este proxy también para HTTPS”.
 
 **S3-B04_browser_proxy**.
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 031221.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 031221.png>)
 
 **4) Activar intercept en Burp:**
 
 * `Proxy` → `Intercept` → botón en **“Intercept is on”**.
 
 **S3-B05_intercept_on**.
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 031221-b.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 031221-b.png>)
 
 ### B3. Capturar login de DVWA y guardar request (para sqlmap)
 
@@ -256,7 +256,7 @@ pantalla de login de DVWA.
 3. Burp debe interceptar un `POST` a `/dvwa/login.php` o similar.
 
 **S3-B06_dvwa_request_intercept**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 031443.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 031443.png>)
 pantalla de `Intercept` mostrando la request de login.
 
 1. En esa request:
@@ -296,7 +296,7 @@ sqlmap -r dvwa_login.txt --batch --risk=1 --level=1 --dbs
 * Aquí mostrará nombres de bases de datos del entorno DVWA (por ejemplo `dvwa`, `information_schema`).
 
 **S3-B07_burp_repeater_dvwa, B08_guardar_dvwa_login_txt, B09_ls_dvwa_login, B11_sqlmap_dbs and B10_sqlmap_basic**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 031903.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 031903.png>)
 se ve la request en Repeater. Ademas, diálogo de guardado (opcional).Igualmente se vea el archivo `dvwa_login.txt`. Finalmente se vea el comando y parte de la salida (detección o “no injection”). Incluyendo salida listando DBs.
 
 > En el informe: esto será la PoC de que **una SQLi permite enumerar bases de datos** en un entorno vulnerable controlado.
@@ -357,7 +357,7 @@ Aquí **solo** se hace:
      * Cabeceras (`Set-Cookie`, etc.).
 
 **S3-C01_triphasik_app_login_page, C02_triphasik_app_request_intercept, C03_triphasik_app_repeater, C04_guardar_triphasik_app_login_txt and C05_triphasik_app_response**: 
-![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 033511.png>)
+![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 033511.png>)
 
 screenshot de la página de login (tapa datos sensibles).y request capturada.Ademas, request en Repeater.finalmente, la respuesta mostrando cabeceras y estado.
 
@@ -399,7 +399,7 @@ screenshot de la página de login (tapa datos sensibles).y request capturada.Ade
 
 
 **S3-C06_triphasik_wp_login_page, S3-C07_triphasik_wp_request_intercept, S3-C08_triphasik_wp_repeater, S3-C09_guardar_triphasik_wp_login_txt and S3-C10_triphasik_wp_response**: 
-  ![alt text](<evidencias\Screenshot\Captura de pantalla 2025-12-05 034627.png>)
+  ![alt text](<evidencias/Screenshot/Captura de pantalla 2025-12-05 034627.png>)
    formulario de login de WordPress. Ademas, primera request interceptada.
 
 > En el informe lo describes como **evaluación pasiva y controlada del panel admin de WordPress**, sin explotación automatizada (ni sqlmap ni fuerza bruta).
